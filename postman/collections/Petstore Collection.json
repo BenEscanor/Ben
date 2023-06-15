@@ -19,9 +19,11 @@
 								{
 									"listen": "test",
 									"script": {
+ 
 										"id": "8535066c-7735-4f8a-b55e-27ac339d71cb",
 										"exec": [
 											"pm.collectionVariables.get(\"variable_key\");"
+ 
 										],
 										"type": "text/javascript"
 									}
