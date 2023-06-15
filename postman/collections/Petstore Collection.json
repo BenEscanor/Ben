@@ -15,6 +15,18 @@
 					"item": [
 						{
 							"name": "Read a spacecraft",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8535066c-7735-4f8a-b55e-27ac339d71cb",
+										"exec": [
+											"pm.collectionVariables.get(\"variable_key\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "3cf4fe15-8f05-4dc8-be64-5a217cd27b47",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -184,6 +196,41 @@
 				}
 			],
 			"id": "5b04ea09-7ee5-4244-a13e-defd030d4273"
+		},
+		{
+			"name": "Post request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "748982a3-89a4-4e4b-91d7-ff6dd9263e8a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "8a0b1c5f-99e4-460e-8786-be16afcb79e9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/spacecrafts1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"spacecrafts1"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {
