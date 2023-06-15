@@ -15,6 +15,18 @@
 					"item": [
 						{
 							"name": "Read a spacecraft",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5abf7669-2621-4a75-8e8b-2a481c565216",
+										"exec": [
+											"pm.globals.get(\"variable_key\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "3cf4fe15-8f05-4dc8-be64-5a217cd27b47",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
